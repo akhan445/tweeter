@@ -1,0 +1,23 @@
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header#main-header {
+    width: 30%;
+    height: auto;
+    margin-top: 0px;
+    /* margin-right: 5%; */
+    margin-left: 5%;
+  }
+
+  main.container {
+    width: 50%;
+    margin-top: 150px;
+  }
+
+
+}
