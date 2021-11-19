@@ -81,6 +81,7 @@ $(document).ready(function () {
 
   $(".right-content").click(function() {
     $(".new-tweet").slideToggle("slow");
+    $("#tweet-text").focus();
   })
 
 });

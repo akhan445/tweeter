@@ -48,21 +48,6 @@
   padding: 0 5px;
 }
 
-/* .expandable {
-  background: #fff;
-  overflow: hidden;
-  color: #000;   
-  line-height: 50px;
-
-  transition: all .5s ease-in-out;
-  transform-origin: left top;
-  transform: scaleY(0);
- }
- 
- .expandable:target {
-  transform: scaleY(1);
-} */
-
 #back-to-top {
   position: fixed;
   color: white;

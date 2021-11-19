@@ -20,13 +20,13 @@ nav {
    display: flex;
    flex-direction: column;
    align-items: center;
+   cursor: pointer;
  }
 
  #double-down-arrow {
    color: red;
    animation-name: bounce;
    animation-duration: 2s;
-   /* animation-timing-function: linear; */
    animation-iteration-count: infinite;
  }
 
