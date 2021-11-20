@@ -100,6 +100,7 @@ $(document).ready(function () {
     }
   });
 
+  // Scroll to top of page on click
   $("#back-to-top").click(function() {
     $(window).scrollTop(0);
   });
