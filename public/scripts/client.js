@@ -99,4 +99,9 @@ $(document).ready(function () {
       $("#back-to-top").hide();
     }
   });
+
+  $("#back-to-top").click(function() {
+    $(window).scrollTop(0);
+  });
+
 });
