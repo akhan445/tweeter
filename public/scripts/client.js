@@ -48,16 +48,19 @@ const loadTweets = function() {
 }
 
 $(document).ready(function () {
+  // Hide the error
   $("#error").hide();
   loadTweets();
 
+  // Form submission handling
   $("form").submit(function (event) {
     event.preventDefault();
-    $("#error").slideUp();
+    if ($("#error").css("display") === "none") {
+      $("#error").slideUp();
+    }
 
     const text = $("#tweet-text").val();
     const error = $(this).parent().find("#error-message");
-    console.log(error)
 
     if (text.trim() === "") {
       error.text("Error: Empty Strings are not allowed.");
@@ -79,9 +82,21 @@ $(document).ready(function () {
     }
   });
 
+  // Write a new tweet section on nav
   $(".right-content").click(function() {
+    // Slide up the error message if displayed and auto focus in text area
+    $("body").find("#error").slideUp();
     $(".new-tweet").slideToggle("slow");
     $("#tweet-text").focus();
-  })
+  });
 
+  //back to top button scroll handling 
+  $(window).scroll(function() {
+    // displays when the user has scrolled at least 150 pixels
+    if ($(this).scrollTop() > 150) {
+      $("#back-to-top").show();
+    } else {
+      $("#back-to-top").hide();
+    }
+  });
 });

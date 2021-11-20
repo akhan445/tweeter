@@ -58,4 +58,6 @@
   padding: 10px 20px;
   border-radius: 50%;
   box-shadow: 7px 7px 3px #c3c3c3;
+  display: none;
+  cursor: pointer;
 }
