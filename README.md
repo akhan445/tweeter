@@ -16,3 +16,19 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+Responsive Layout:
+
+![dektop](/docs/desktop.png)
+
+![mobile](/docs/mobile.png)
+
+Writing a new tweet:
+
+![new-tweet](/docs/new_tweet.gif)
+
+Scroll to top feature:
+
+![scroll-to-top](/docs/scroll_to_top.gif)
