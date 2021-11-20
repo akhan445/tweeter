@@ -3,12 +3,15 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+/* Validate's user's tweet is not malicious */
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+/* Render's tweet on the main page */
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     const article = createTweetElement(tweet);
@@ -16,6 +19,7 @@ const renderTweets = function (tweets) {
   }
 };
 
+/* Create a new html element of user's tweet */
 const createTweetElement = function (tweetObj) {
   const $tweet =
     `<article class="tweet">
@@ -40,6 +44,7 @@ const createTweetElement = function (tweetObj) {
   return $tweet;
 };
 
+/* Makes a get request for all the tweets and then renders them onto the screen */
 const loadTweets = function() {
   $.get("/tweets")
   .then(function(tweets) {
@@ -47,8 +52,9 @@ const loadTweets = function() {
   });
 }
 
+/* jQuery main function to handle client events */
 $(document).ready(function () {
-  // Hide the error
+  // Hide the error, load all tweets from database on load
   $("#error").hide();
   loadTweets();
 
